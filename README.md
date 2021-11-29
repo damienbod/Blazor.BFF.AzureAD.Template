@@ -4,10 +4,10 @@
 
 ## Features
 
-- ASP.NET Core 6
-- BFF
-- Azure AD
-
+- WASM hosted in ASP.NET Core 6
+- BFF with Azure AD using Microsoft.Identity.Web
+- OAuth2 and OpenID Connect OIDC
+- No tokens in the browser
 
 ## Using the template
 
