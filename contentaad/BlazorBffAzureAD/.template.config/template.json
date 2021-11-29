@@ -8,7 +8,7 @@
     ],
     "name": "ASP.NET Core Blazor BFF hosted WASM Azure AD",
     "identity": "BlazorBffAzureADTemplate",
-    "shortName": "sts",
+    "shortName": "blazorbffaad",
     "tags": {
         "language": "C#"
     },

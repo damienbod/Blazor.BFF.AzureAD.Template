@@ -40,7 +40,7 @@ Where `<PATH>` is the path to the folder containing .template.config.
 ### run
 
 ```
-dotnet new sts -n YourCompany.Sts
+dotnet new blazorbffaad -n YourCompany.Bff
 ```
 
 Use the `-n` or `--name` parameter to change the name of the output created. This string is also used to substitute the namespace name in the .cs file for the project.
