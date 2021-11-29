@@ -22,7 +22,7 @@ namespace BlazorBffAzureAD.Server.Services
                 .Request()
                 .WithScopes("User.ReadBasic.All", "user.read")
                 .GetAsync()
-                .ConfigureAwait(false);
+                ;
         }
 
         public async Task<string> GetGraphApiProfilePhoto()
@@ -38,7 +38,7 @@ namespace BlazorBffAzureAD.Server.Services
                     .Request()
                     .WithScopes("User.ReadBasic.All", "user.read")
                     .GetAsync()
-                    .ConfigureAwait(false))
+                    )
                 {
                     byte[] photoByte = ((MemoryStream)photoStream).ToArray();
                     photo = Convert.ToBase64String(photoByte);

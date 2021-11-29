@@ -36,7 +36,7 @@ namespace BlazorBffAzureAD.Client
 
             builder.Services.AddTransient(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("default"));
 
-            await builder.Build().RunAsync().ConfigureAwait(false);
+            await builder.Build().RunAsync();
         }
     }
 }
