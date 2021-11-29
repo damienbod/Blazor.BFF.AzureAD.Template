@@ -1,11 +1,16 @@
 # Blazor WASM hosted in ASP.NET COre using Azure AD BFF
 
-[![.NET](https://github.com/damienbod/BlazorTemplates/actions/workflows/dotnet.yml/badge.svg)](https://github.com/damienbod/BlazorTemplates/actions/workflows/dotnet.yml) [![NuGet Status](http://img.shields.io/nuget/v/IdentityServer4AspNetCoreIdentityTemplate.svg?style=flat-square)](https://www.nuget.org/packages/IdentityServer4AspNetCoreIdentityTemplate/) [Change log](https://github.com/damienbod/IdentityServer4AspNetCoreIdentityTemplate/blob/master/Changelog.md)
+[![.NET](https://github.com/damienbod/BlazorTemplates/actions/workflows/dotnet.yml/badge.svg)](https://github.com/damienbod/BlazorTemplates/actions/workflows/dotnet.yml) 
+
+[![NuGet Status](http://img.shields.io/nuget/v/IdentityServer4AspNetCoreIdentityTemplate.svg?style=flat-square)](https://www.nuget.org/packages/IdentityServer4AspNetCoreIdentityTemplate/) 
+
+[Change log](https://github.com/damienbod/BlazorTemplates/blob/main/Changelog.md)
 
 ## Features
 
 - ASP.NET Core 6
 - BFF
+- Azure AD
 
 
 ## Using the template
