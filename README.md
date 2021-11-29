@@ -20,13 +20,13 @@
 From NuGet:
 
 ```
-dotnet new -i BlazorBffAzureADTemplate
+dotnet new -i Blazor.BFF.AzureAD.Template
 ```
 
 Locally built nupkg:
 
 ```
-dotnet new -i BlazorBffAzureADTemplate.1.0.0.nupkg
+dotnet new -i Blazor.BFF.AzureAD.Template.1.0.0.nupkg
 ```
 
 Local folder:
@@ -76,7 +76,7 @@ Add the scopes for the downstream API if required
 ### uninstall
 
 ```
-dotnet new -u BlazorBffAzureADTemplate
+dotnet new -u Blazor.BFF.AzureAD.Template
 ```
 
 ## Development
@@ -86,7 +86,7 @@ dotnet new -u BlazorBffAzureADTemplate
 https://docs.microsoft.com/en-us/dotnet/core/tutorials/create-custom-template
 
 ```
-nuget pack contentaad/BlazorBffAzureADTemplate.nuspec
+nuget pack contentaad/Blazor.BFF.AzureAD.Template.nuspec
 ```
 
 

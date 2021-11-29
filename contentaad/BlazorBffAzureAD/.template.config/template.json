@@ -7,7 +7,7 @@
 		"OAuth2"
     ],
     "name": "ASP.NET Core Blazor BFF hosted WASM Azure AD",
-    "identity": "BlazorBffAzureADTemplate",
+    "identity": "Blazor.BFF.AzureAD.Template",
     "shortName": "blazorbffaad",
     "tags": {
         "language": "C#"
