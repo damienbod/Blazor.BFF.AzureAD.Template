@@ -4,7 +4,7 @@
         "AspNetCore",
         "WASM",
         "AzureAD",
-		"OAuth2
+		"OAuth2"
     ],
     "name": "ASP.NET Core Blazor BFF hosted WASM Azure AD",
     "identity": "BlazorBffAzureADTemplate",
