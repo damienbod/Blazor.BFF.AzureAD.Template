@@ -64,7 +64,7 @@ Add the Azure AD App registration settings
 Add the scopes for the downstream API if required
 
 ```
-  "DirectApi": {
+  "DownstreamApi": {
     "ScopeForAccessToken": "api://--your-api-clientid--/access_as_user User.ReadBasic.All user.read"
   },
 ```

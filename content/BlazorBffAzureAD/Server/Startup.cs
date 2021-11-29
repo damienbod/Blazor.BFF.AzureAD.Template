@@ -34,7 +34,7 @@ namespace BlazorBffAzureAD.Server
             services.AddHttpClient();
             services.AddOptions();
 
-            string[] initialScopes = Configuration.GetValue<string>("DirectApi:ScopeForAccessToken")?.Split(' ');
+            string[] initialScopes = Configuration.GetValue<string>("DownstreamApi:ScopeForAccessToken")?.Split(' ');
 
             services.AddMicrosoftIdentityWebAppAuthentication(Configuration)
                 .EnableTokenAcquisitionToCallDownstreamApi(initialScopes)
