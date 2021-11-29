@@ -12,6 +12,6 @@
     "tags": {
         "language": "C#"
     },
-    "sourceName": "BlazorBffAzure",
+    "sourceName": "BlazorBffAzureAD",
     "preferNameDirectory": "true"
 }
