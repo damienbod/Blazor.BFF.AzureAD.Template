@@ -1,10 +1,6 @@
 # Blazor WASM hosted in ASP.NET Core using Azure AD BFF
 
-[![.NET](https://github.com/damienbod/BlazorTemplates/actions/workflows/dotnet.yml/badge.svg)](https://github.com/damienbod/BlazorTemplates/actions/workflows/dotnet.yml) 
-
-[![NuGet Status](http://img.shields.io/nuget/v/IdentityServer4AspNetCoreIdentityTemplate.svg?style=flat-square)](https://www.nuget.org/packages/IdentityServer4AspNetCoreIdentityTemplate/) 
-
-[Change log](https://github.com/damienbod/BlazorTemplates/blob/main/Changelog.md)
+[![.NET](https://github.com/damienbod/Blazor.BFF.AzureAD.Template/actions/workflows/dotnet.yml/badge.svg)](https://github.com/damienbod/Blazor.BFF.AzureAD.Template/actions/workflows/dotnet.yml) [![NuGet Status](http://img.shields.io/nuget/v/Blazor.BFF.AzureAD.Template.svg?style=flat-square)](https://www.nuget.org/packages/Blazor.BFF.AzureAD.Template/) [Change log](https://github.com/damienbod/Blazor.BFF.AzureAD.Template/blob/main/Changelog.md)
 
 ## Features
 
@@ -86,7 +82,7 @@ dotnet new -u Blazor.BFF.AzureAD.Template
 https://docs.microsoft.com/en-us/dotnet/core/tutorials/create-custom-template
 
 ```
-nuget pack contentaad/Blazor.BFF.AzureAD.Template.nuspec
+nuget pack content/Blazor.BFF.AzureAD.Template.nuspec
 ```
 
 
