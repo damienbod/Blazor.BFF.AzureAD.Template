@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BlazorHosted.Server
+namespace BlazorBffAzureAD.Server
 {
     public class Program
     {

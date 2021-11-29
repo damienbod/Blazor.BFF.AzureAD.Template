@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 
-namespace BlazorHosted.Server
+namespace BlazorBffAzureAD.Server
 {
     public static class SecurityHeadersDefinitions
     {

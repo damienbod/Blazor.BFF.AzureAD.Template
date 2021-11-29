@@ -1,4 +1,4 @@
-using BlazorHosted.Server.Services;
+using BlazorBffAzureAD.Server.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -8,7 +8,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Identity.Web;
 using Microsoft.Identity.Web.UI;
 
-namespace BlazorHosted.Server
+namespace BlazorBffAzureAD.Server
 {
     public class Startup
     {

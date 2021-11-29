@@ -1,4 +1,4 @@
-﻿using BlazorHosted.Client.Services;
+﻿using BlazorBffAzureAD.Client.Services;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
@@ -8,7 +8,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
-namespace BlazorHosted.Client
+namespace BlazorBffAzureAD.Client
 {
     public class Program
     {

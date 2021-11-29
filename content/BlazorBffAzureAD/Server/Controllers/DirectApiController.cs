@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Identity.Web;
 
-namespace BlazorHosted.Server.Controllers
+namespace BlazorBffAzureAD.Server.Controllers
 {
     [ValidateAntiForgeryToken]
     [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme)]

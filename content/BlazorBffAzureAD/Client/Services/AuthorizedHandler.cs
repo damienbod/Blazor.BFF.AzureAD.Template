@@ -3,7 +3,7 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace BlazorHosted.Client.Services
+namespace BlazorBffAzureAD.Client.Services
 {
     // orig src https://github.com/berhir/BlazorWebAssemblyCookieAuth
     public class AuthorizedHandler : DelegatingHandler

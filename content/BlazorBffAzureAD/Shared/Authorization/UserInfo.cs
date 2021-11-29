@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace BlazorHosted.Shared.Authorization
+namespace BlazorBffAzureAD.Shared.Authorization
 {
     public class UserInfo
     {
