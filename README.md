@@ -89,7 +89,6 @@ nuget pack content/Blazor.BFF.AzureAD.Template.nuspec
 ## Credits, Used NuGet packages + ASP.NET Core 6.0 standard packages
 
 - NetEscapades.AspNetCore.SecurityHeaders
-- Serilog
 
 ## Links
 
