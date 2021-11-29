@@ -58,11 +58,11 @@ dotnet new -u BlazorBffAzureADTemplate
 https://docs.microsoft.com/en-us/dotnet/core/tutorials/create-custom-template
 
 ```
-nuget pack content/BlazorBffAzureADTemplate.nuspec
+nuget pack contentaad/BlazorBffAzureADTemplate.nuspec
 ```
 
 
-## Credits, Used NuGet packages + ASP.NET Core 3.1 standard packages
+## Credits, Used NuGet packages + ASP.NET Core 6.0 standard packages
 
 - NetEscapades.AspNetCore.SecurityHeaders
 - Serilog
