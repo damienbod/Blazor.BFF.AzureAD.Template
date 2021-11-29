@@ -1,4 +1,4 @@
-# Blazor WASM hosted in ASP.NET COre using Azure AD BFF
+# Blazor WASM hosted in ASP.NET Core using Azure AD BFF
 
 [![.NET](https://github.com/damienbod/BlazorTemplates/actions/workflows/dotnet.yml/badge.svg)](https://github.com/damienbod/BlazorTemplates/actions/workflows/dotnet.yml) 
 
