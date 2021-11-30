@@ -34,12 +34,12 @@ namespace BlazorBffAzureAD.Server
             services.AddHttpClient();
             services.AddOptions();
 
-            string[] initialScopes = Configuration.GetValue<string>("DownstreamApi:ScopeForAccessToken")?.Split(' ');
+            var scopes = Configuration.GetValue<string>("DownstreamApi:Scopes");
+            string[] initialScopes = scopes?.Split(' ');
 
             services.AddMicrosoftIdentityWebAppAuthentication(Configuration)
                 .EnableTokenAcquisitionToCallDownstreamApi(initialScopes)
-                .AddMicrosoftGraph("https://graph.microsoft.com/beta",
-                    "User.ReadBasic.All user.read")
+                .AddMicrosoftGraph("https://graph.microsoft.com/beta", scopes)
                 .AddInMemoryTokenCaches();
 
             services.AddControllersWithViews(options =>
