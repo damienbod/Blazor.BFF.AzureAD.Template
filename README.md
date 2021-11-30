@@ -13,25 +13,9 @@
 
 ### install
 
-From NuGet:
-
 ```
 dotnet new -i Blazor.BFF.AzureAD.Template
 ```
-
-Locally built nupkg:
-
-```
-dotnet new -i Blazor.BFF.AzureAD.Template.1.0.0.nupkg
-```
-
-Local folder:
-
-```
-dotnet new -i <PATH>
-```
-
-Where `<PATH>` is the path to the folder containing .template.config.
 
 ### run
 
@@ -84,6 +68,22 @@ https://docs.microsoft.com/en-us/dotnet/core/tutorials/create-custom-template
 ```
 nuget pack content/Blazor.BFF.AzureAD.Template.nuspec
 ```
+
+### install developement
+
+Locally built nupkg:
+
+```
+dotnet new -i Blazor.BFF.AzureAD.Template.1.0.0.nupkg
+```
+
+Local folder:
+
+```
+dotnet new -i <PATH>
+```
+
+Where `<PATH>` is the path to the folder containing .template.config.
 
 
 ## Credits, Used NuGet packages + ASP.NET Core 6.0 standard packages
