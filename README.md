@@ -2,6 +2,8 @@
 
 [![.NET](https://github.com/damienbod/Blazor.BFF.AzureAD.Template/actions/workflows/dotnet.yml/badge.svg)](https://github.com/damienbod/Blazor.BFF.AzureAD.Template/actions/workflows/dotnet.yml) [![NuGet Status](http://img.shields.io/nuget/v/Blazor.BFF.AzureAD.Template.svg?style=flat-square)](https://www.nuget.org/packages/Blazor.BFF.AzureAD.Template/) [Change log](https://github.com/damienbod/Blazor.BFF.AzureAD.Template/blob/main/Changelog.md)
 
+![Blazor BFF Azure AD](https://github.com/damienbod/Blazor.BFF.AzureAD.Template/blob/main/images/blazorBFFAzureAD.png)
+
 ## Features
 
 - WASM hosted in ASP.NET Core 6
