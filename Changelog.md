@@ -6,6 +6,6 @@
 - Initial release 
 - Azure AD authentication using Microsoft.Identity.Web
 - Microsoft Graph
-- ASP.NET 6
+- ASP.NET Core 6
 
 
