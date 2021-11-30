@@ -65,7 +65,7 @@ Add the scopes for the downstream API if required
 
 ```
   "DownstreamApi": {
-    "ScopeForAccessToken": "api://--your-api-clientid--/access_as_user User.ReadBasic.All user.read"
+    "Scopes": "User.ReadBasic.All user.read"
   },
 ```
 
