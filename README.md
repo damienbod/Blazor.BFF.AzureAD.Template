@@ -13,6 +13,11 @@ This template can be used to create a Blazor WASM application hosted in an ASP.N
 - OAuth2 and OpenID Connect OIDC
 - No tokens in the browser
 
+## Other templates
+
+[Blazor BFF Azure B2C](https://github.com/damienbod/Blazor.BFF.AzureB2C.Template)
+
+
 ## Using the template
 
 ### install
