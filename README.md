@@ -94,6 +94,9 @@ dotnet new -i <PATH>
 
 Where `<PATH>` is the path to the folder containing .template.config.
 
+## Azure App registrations documentation
+
+https://docs.microsoft.com/en-us/azure/active-directory-b2c/tutorial-register-applications
 
 ## Credits, Used NuGet packages + ASP.NET Core 6.0 standard packages
 
@@ -102,3 +105,4 @@ Where `<PATH>` is the path to the folder containing .template.config.
 ## Links
 
 https://github.com/AzureAD/microsoft-identity-web
+
