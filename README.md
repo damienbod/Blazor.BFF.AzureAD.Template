@@ -96,7 +96,7 @@ Where `<PATH>` is the path to the folder containing .template.config.
 
 ## Azure App registrations documentation
 
-https://docs.microsoft.com/en-us/azure/active-directory-b2c/tutorial-register-applications
+https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app
 
 ## Credits, Used NuGet packages + ASP.NET Core 6.0 standard packages
 
