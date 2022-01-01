@@ -17,6 +17,7 @@ This template can be used to create a Blazor WASM application hosted in an ASP.N
 
 [Blazor BFF Azure B2C](https://github.com/damienbod/Blazor.BFF.AzureB2C.Template)
 
+[Blazor BFF Azure OpenID Connect](https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template)
 
 ## Using the template
 
@@ -94,6 +95,9 @@ dotnet new -i <PATH>
 
 Where `<PATH>` is the path to the folder containing .template.config.
 
+## Azure App registrations documentation
+
+https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app
 
 ## Credits, Used NuGet packages + ASP.NET Core 6.0 standard packages
 
@@ -103,3 +107,4 @@ Where `<PATH>` is the path to the folder containing .template.config.
 ## Links
 
 https://github.com/AzureAD/microsoft-identity-web
+
