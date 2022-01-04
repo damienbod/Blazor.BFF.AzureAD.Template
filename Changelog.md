@@ -2,8 +2,9 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.AzureAD.Template/blob/main/README.md) 
 
-**2022-01-04** 1.0.3
+**2022-01-04** 1.0.4
 - small fixes
+- nuget packages updated
 
 **2021-12-09** 1.0.2
 - Removed static host file
