@@ -5,6 +5,7 @@
 **2022-01-09** 1.0.5
 - small fixes
 - removed unused configurations and packages
+- switched to MicrosoftGraph
 
 **2022-01-04** 1.0.4
 - small fixes
