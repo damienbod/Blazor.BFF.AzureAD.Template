@@ -2,6 +2,9 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.AzureAD.Template/blob/main/README.md) 
 
+**2022-01-21** 1.0.7
+- removed unused client file
+
 **2022-01-17** 1.0.6
 - removed launchsettings.json from WASM client
 - removed unused client files
