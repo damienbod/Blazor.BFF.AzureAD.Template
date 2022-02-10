@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace BlazorBffAzureAD.Server.Services
 {
-    public class GraphApiClientService
+    public class MsGraphService
     {
         private readonly GraphServiceClient _graphServiceClient;
 
-        public GraphApiClientService(GraphServiceClient graphServiceClient)
+        public MsGraphService(GraphServiceClient graphServiceClient)
         {
             _graphServiceClient = graphServiceClient;
         }
@@ -21,8 +21,7 @@ namespace BlazorBffAzureAD.Server.Services
                 .Me
                 .Request()
                 .WithScopes("User.ReadBasic.All", "user.read")
-                .GetAsync()
-                ;
+                .GetAsync();
         }
 
         public async Task<string> GetGraphApiProfilePhoto()
@@ -32,13 +31,8 @@ namespace BlazorBffAzureAD.Server.Services
                 var photo = string.Empty;
                 // Get user photo
                 using (var photoStream = await _graphServiceClient
-                    .Me
-                    .Photo
-                    .Content
-                    .Request()
-                    .WithScopes("User.ReadBasic.All", "user.read")
-                    .GetAsync()
-                    )
+                    .Me.Photo.Content.Request()
+                    .WithScopes("User.ReadBasic.All", "user.read").GetAsync())
                 {
                     byte[] photoByte = ((MemoryStream)photoStream).ToArray();
                     photo = Convert.ToBase64String(photoByte);
