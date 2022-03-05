@@ -2,6 +2,9 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.AzureAD.Template/blob/main/README.md) 
 
+**2022-03-05** 1.0.10
+- Update nuget packages
+
 **2022-02-11** 1.0.9
 - Update namespaces
 - Update nuget packages
