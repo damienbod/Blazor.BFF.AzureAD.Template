@@ -2,6 +2,10 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.AzureAD.Template/blob/main/README.md) 
 
+**2022-03-20** 1.1.0
+- Update nuget packages
+- Enable nullable checks
+
 **2022-03-05** 1.0.10
 - Update nuget packages
 
