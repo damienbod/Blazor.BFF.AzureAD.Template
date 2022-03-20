@@ -36,11 +36,11 @@ public class Startup
         services.AddOptions();
 
         var scopes = Configuration.GetValue<string>("DownstreamApi:Scopes");
-        string[] initialScopes = scopes?.Split(' ');
+        string[] initialScopes = scopes.Split(' ');
 
         services.AddMicrosoftIdentityWebAppAuthentication(Configuration)
             .EnableTokenAcquisitionToCallDownstreamApi(initialScopes)
-            .AddMicrosoftGraph("https://graph.microsoft.com/beta", scopes)
+            .AddMicrosoftGraph(scopes)
             .AddInMemoryTokenCaches();
 
         services.AddControllersWithViews(options =>
