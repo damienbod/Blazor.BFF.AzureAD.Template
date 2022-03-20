@@ -40,7 +40,7 @@ public class Startup
 
         services.AddMicrosoftIdentityWebAppAuthentication(Configuration)
             .EnableTokenAcquisitionToCallDownstreamApi(initialScopes)
-            .AddMicrosoftGraph(scopes)
+            .AddMicrosoftGraph("https://graph.microsoft.com/v1.0", scopes)
             .AddInMemoryTokenCaches();
 
         services.AddControllersWithViews(options =>
