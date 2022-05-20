@@ -65,6 +65,55 @@ Add the scopes for the downstream API if required
 
 ### Use Continuous Access Evaluation CAE with downstream API (access_token)
 
+Any API call for the Blazor WASM could be implemented like this:
+
+```
+[HttpGet]
+public async Task<IActionResult> Get()
+{
+	try
+	{
+		// do business which calls an API and throws claims challenge WebApiMsalUiRequiredException 
+		// The WWW-Authenticate header is set using the OpenID Connect standards and Signals spec.
+	}
+	catch (WebApiMsalUiRequiredException hex)
+	{
+		var claimChallenge = WwwAuthenticateParameters
+			.GetClaimChallengeFromResponseHeaders(hex.Headers);
+			
+		return Unauthorized(claimChallenge);
+	}
+}
+```
+
+the API call could look like this:
+
+```
+public async Task<T> CallApiAsync(string url)
+{
+	var client = _clientFactory.CreateClient();
+
+	// ... add bearer token
+	
+	var response = await client.GetAsync(url);
+	if (response.IsSuccessStatusCode)
+	{
+		var stream = await response.Content.ReadAsStreamAsync();
+		var payload = await JsonSerializer.DeserializeAsync<T>(stream);
+
+		return payload;
+	}
+
+	// ... you could check  the WWW-Authenticate header first, if it is a CAE challenge
+	
+	throw new WebApiMsalUiRequiredException($"Error: {response.StatusCode}.", response);
+}
+```
+
+### Use Continuous Access Evaluation CAE as standalone (id_token)
+
+If using a CAE authcontext in a standalone project, you only need to challenge against the claims in the application.
+
 ```
 private readonly CaeCliamsChallengeService _caeCliamsChallengeService;
 
@@ -84,27 +133,6 @@ public async Task<IActionResult> Get()
 	{
 		return Unauthorized(claimsChallenge);
 	}
-```
-
-### Use Continuous Access Evaluation CAE as standalone (id_token)
-
-```
-[HttpGet]
-public async Task<IActionResult> Get()
-{
-	try
-	{
-		// do business which calls an API and throws claims challenge WebApiMsalUiRequiredException 
-		// The WWW-Authenticate header is set using the OpenID Connect standards and Signals spec.
-	}
-	catch (WebApiMsalUiRequiredException hex)
-	{
-		var claimChallenge = WwwAuthenticateParameters
-			.GetClaimChallengeFromResponseHeaders(hex.Headers);
-			
-		return Unauthorized(claimChallenge);
-	}
-}
 ```
 
 ### uninstall
