@@ -65,7 +65,7 @@ public async Task<IActionResult> Get()
 {
   try
   {
-	// do business which calls an API and throws claims challenge 
+	// Do the logic which calls an API and throws claims challenge 
 	// WebApiMsalUiRequiredException. The WWW-Authenticate header is set
 	// using the OpenID Connect standards and Signals spec.
   }
@@ -97,7 +97,7 @@ public async Task<T> CallApiAsync(string url)
 		return payload;
 	}
 
-	// ... you could check  the WWW-Authenticate header first, if it is a CAE challenge
+	// You can check the WWW-Authenticate header first, if it is a CAE challenge
 	
 	throw new WebApiMsalUiRequiredException($"Error: {response.StatusCode}.", response);
 }
