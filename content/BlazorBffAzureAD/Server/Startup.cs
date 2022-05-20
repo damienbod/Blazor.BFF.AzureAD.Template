@@ -77,6 +77,9 @@ public class Startup
         app.UseStaticFiles();
 
         app.UseRouting();
+
+        app.UseNoUnauthorizedRedirect("/api");
+
         app.UseAuthentication();
         app.UseAuthorization();
 
@@ -84,7 +87,9 @@ public class Startup
         {
             endpoints.MapRazorPages();
             endpoints.MapControllers();
+            endpoints.MapNotFound("/api/{**segment}");
             endpoints.MapFallbackToPage("/_Host");
         });
+
     }
 }
