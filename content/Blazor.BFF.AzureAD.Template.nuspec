@@ -5,7 +5,7 @@
 		<version>1.2.0</version>
 		<title>Blazor.BFF.AzureAD.Template</title>
 		<license type="file">LICENSE</license>
-		<description>Blazor Backend for frontend (BFF) template for WASM ASP.NET Core hosted</description>
+		<description>Blazor backend for frontend (BFF) template for WASM ASP.NET Core hosted</description>
 			<projectUrl>https://github.com/damienbod/Blazor.BFF.AzureAD.Template</projectUrl>
 		<authors>damienbod</authors>
 		<owners>damienbod</owners>
