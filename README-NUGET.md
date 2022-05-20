@@ -63,18 +63,19 @@ Any API call for the Blazor WASM could be implemented like this:
 [HttpGet]
 public async Task<IActionResult> Get()
 {
-	try
-	{
-		// do business which calls an API and throws claims challenge WebApiMsalUiRequiredException 
-		// The WWW-Authenticate header is set using the OpenID Connect standards and Signals spec.
-	}
-	catch (WebApiMsalUiRequiredException hex)
-	{
-		var claimChallenge = WwwAuthenticateParameters
-			.GetClaimChallengeFromResponseHeaders(hex.Headers);
-			
-		return Unauthorized(claimChallenge);
-	}
+  try
+  {
+	// do business which calls an API and throws claims challenge 
+	// WebApiMsalUiRequiredException. The WWW-Authenticate header is set
+	// using the OpenID Connect standards and Signals spec.
+  }
+  catch (WebApiMsalUiRequiredException hex)
+  {
+	var claimChallenge = WwwAuthenticateParameters
+		.GetClaimChallengeFromResponseHeaders(hex.Headers);
+		
+	return Unauthorized(claimChallenge);
+  }
 }
 ```
 
