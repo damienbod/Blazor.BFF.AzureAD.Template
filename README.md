@@ -117,24 +117,24 @@ public async Task<T> CallApiAsync(string url)
 If using a CAE Authcontext in a standalone project, you only need to challenge against the claims in the application.
 
 ```
-private readonly CaeCliamsChallengeService _caeCliamsChallengeService;
+private readonly CaeClaimsChallengeService _caeClaimsChallengeService;
 
-public AdminApiCallsController(CaeCliamsChallengeService caeCliamsChallengeService)
+public AdminApiCallsController(CaeClaimsChallengeService caeClaimsChallengeService)
 {
-	_caeCliamsChallengeService = caeCliamsChallengeService;
+  _caeClaimsChallengeService = caeClaimsChallengeService;
 }
 
 [HttpGet]
-public async Task<IActionResult> Get()
+public IActionResult Get()
 {
-	// if CAE claim missing in id token, the required claims challenge is returned
-	var claimsChallenge = _caeCliamsChallengeService
-		.CheckForRequiredAuthContextIdToken(AuthContextId.C1, HttpContext);
+  // if CAE claim missing in id token, the required claims challenge is returned
+  var claimsChallenge = _caeClaimsChallengeService
+	.CheckForRequiredAuthContextIdToken(AuthContextId.C1, HttpContext);
 
-	if (claimsChallenge != null)
-	{
-		return Unauthorized(claimsChallenge);
-	}
+  if (claimsChallenge != null)
+  {
+	return Unauthorized(claimsChallenge);
+  }
 ```
 
 ### uninstall
