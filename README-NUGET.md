@@ -10,6 +10,7 @@ This template can be used to create a Blazor WASM application hosted in an ASP.N
 - BFF with Azure AD using Microsoft.Identity.Web
 - OAuth2 and OpenID Connect OIDC
 - No tokens in the browser
+- Azure AD Continuous Access Evaluation CAE support
 
 ## Using the template
 
