@@ -66,6 +66,23 @@ Add the scopes for the downstream API if required
 
 ### Use Continuous Access Evaluation CAE with a downstream API (access_token)
 
+#### Azure app registration manifest
+
+```json
+"optionalClaims": {
+	"idToken": [],
+	"accessToken": [
+		{
+			"name": "xms_cc",
+			"source": null,
+			"essential": false,
+			"additionalProperties": []
+		}
+	],
+	"saml2Token": []
+},
+```
+
 Any API call for the Blazor WASM could be implemented like this:
 
 ```
@@ -114,6 +131,22 @@ public async Task<T> CallApiAsync(string url)
 
 ### Use Continuous Access Evaluation CAE in a standalone app (id_token)
 
+#### Azure app registration manifest
+
+```json
+"optionalClaims": {
+	"idToken": [
+		{
+			"name": "xms_cc",
+			"source": null,
+			"essential": false,
+			"additionalProperties": []
+		}
+	],
+	"accessToken": [],
+	"saml2Token": []
+},
+```
 If using a CAE Authcontext in a standalone project, you only need to challenge against the claims in the application.
 
 ```
