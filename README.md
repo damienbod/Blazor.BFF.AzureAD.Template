@@ -217,3 +217,5 @@ https://github.com/AzureAD/microsoft-identity-web
 
 https://damienbod.com/2022/04/20/implement-azure-ad-continuous-access-evaluation-in-an-asp-net-core-razor-page-app-using-a-web-api/
 
+https://github.com/damienbod/AspNetCoreAzureADCAE
+
