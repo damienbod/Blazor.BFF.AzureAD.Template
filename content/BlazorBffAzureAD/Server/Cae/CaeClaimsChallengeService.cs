@@ -15,11 +15,11 @@ namespace BlazorBffAzureAD.Server;
 /// 
 /// This class is only required if using a standalone AuthContext check
 /// </summary>
-public class CaeCliamsChallengeService
+public class CaeClaimsChallengeService
 {
     private readonly IConfiguration _configuration;
 
-    public CaeCliamsChallengeService(IConfiguration configuration)
+    public CaeClaimsChallengeService(IConfiguration configuration)
     {
         _configuration = configuration;
     }

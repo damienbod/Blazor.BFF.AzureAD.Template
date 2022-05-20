@@ -23,7 +23,7 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddScoped<MsGraphService>();
-        services.AddScoped<CaeCliamsChallengeService>();
+        services.AddScoped<CaeClaimsChallengeService>();
 
         services.AddAntiforgery(options =>
         {
