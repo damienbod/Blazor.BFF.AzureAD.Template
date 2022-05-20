@@ -2,6 +2,11 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.AzureAD.Template/blob/main/README.md) 
 
+**2022-05-20** 1.2.0
+- Add support for Azure AD Continuous Access Evaluation CAE
+- Add 404, 401, response handling
+- Update nuget packages
+
 **2022-03-20** 1.1.0
 - Update nuget packages
 - Enable nullable checks

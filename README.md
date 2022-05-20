@@ -12,6 +12,7 @@ This template can be used to create a Blazor WASM application hosted in an ASP.N
 - BFF with Azure AD using Microsoft.Identity.Web
 - OAuth2 and OpenID Connect OIDC
 - No tokens in the browser
+- Azure AD Continuous Access Evaluation CAE support
 
 ## Other templates
 
@@ -156,7 +157,7 @@ nuget pack content/Blazor.BFF.AzureAD.Template.nuspec
 Locally built nupkg:
 
 ```
-dotnet new -i Blazor.BFF.AzureAD.Template.1.1.0.nupkg
+dotnet new -i Blazor.BFF.AzureAD.Template.1.2.0.nupkg
 ```
 
 Local folder:
@@ -179,4 +180,6 @@ https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-regis
 ## Links
 
 https://github.com/AzureAD/microsoft-identity-web
+
+https://damienbod.com/2022/04/20/implement-azure-ad-continuous-access-evaluation-in-an-asp-net-core-razor-page-app-using-a-web-api/
 
