@@ -63,6 +63,50 @@ Add the scopes for the downstream API if required
   },
 ```
 
+### Use Continuous Access Evaluation CAE with downstream API (access_token)
+
+```
+private readonly CaeCliamsChallengeService _caeCliamsChallengeService;
+
+public AdminApiCallsController(CaeCliamsChallengeService caeCliamsChallengeService)
+{
+	_caeCliamsChallengeService = caeCliamsChallengeService;
+}
+
+[HttpGet]
+public async Task<IActionResult> Get()
+{
+	// if CAE claim missing in id token, the required claims challenge is returned
+	var claimsChallenge = _caeCliamsChallengeService
+		.CheckForRequiredAuthContextIdToken(AuthContextId.C1, HttpContext);
+
+	if (claimsChallenge != null)
+	{
+		return Unauthorized(claimsChallenge);
+	}
+```
+
+### Use Continuous Access Evaluation CAE as standalone (id_token)
+
+```
+[HttpGet]
+public async Task<IActionResult> Get()
+{
+	try
+	{
+		// do business which calls an API and throws claims challenge WebApiMsalUiRequiredException 
+		// The WWW-Authenticate header is set using the OpenID Connect standards and Signals spec.
+	}
+	catch (WebApiMsalUiRequiredException hex)
+	{
+		var claimChallenge = WwwAuthenticateParameters
+			.GetClaimChallengeFromResponseHeaders(hex.Headers);
+			
+		return Unauthorized(claimChallenge);
+	}
+}
+```
+
 ### uninstall
 
 ```
