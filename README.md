@@ -64,7 +64,7 @@ Add the scopes for the downstream API if required
   },
 ```
 
-### Use Continuous Access Evaluation CAE with downstream API (access_token)
+### Use Continuous Access Evaluation CAE with a downstream API (access_token)
 
 Any API call for the Blazor WASM could be implemented like this:
 
@@ -87,7 +87,7 @@ public async Task<IActionResult> Get()
 }
 ```
 
-the API call could look like this:
+The downstream API call could be implemented something like this:
 
 ```
 public async Task<T> CallApiAsync(string url)
@@ -111,9 +111,9 @@ public async Task<T> CallApiAsync(string url)
 }
 ```
 
-### Use Continuous Access Evaluation CAE as standalone (id_token)
+### Use Continuous Access Evaluation CAE in a standalone app (id_token)
 
-If using a CAE authcontext in a standalone project, you only need to challenge against the claims in the application.
+If using a CAE Authcontext in a standalone project, you only need to challenge against the claims in the application.
 
 ```
 private readonly CaeCliamsChallengeService _caeCliamsChallengeService;
