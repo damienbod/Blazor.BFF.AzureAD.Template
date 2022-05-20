@@ -158,7 +158,7 @@ nuget pack content/Blazor.BFF.AzureAD.Template.nuspec
 Locally built nupkg:
 
 ```
-dotnet new -i Blazor.BFF.AzureAD.Template.1.2.0.nupkg
+dotnet new -i Blazor.BFF.AzureAD.Template.1.2.1.nupkg
 ```
 
 Local folder:
