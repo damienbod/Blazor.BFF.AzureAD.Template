@@ -209,8 +209,7 @@ https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-regis
 ## Credits, Used NuGet packages + ASP.NET Core 6.0 standard packages
 
 - NetEscapades.AspNetCore.SecurityHeaders
-- IdentityModel.AspNetCore
-
+^
 ## Links
 
 https://github.com/AzureAD/microsoft-identity-web
