@@ -1,9 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Configuration;
-using System;
-using System.Linq;
-
-namespace BlazorBffAzureAD.Server;
+﻿namespace BlazorBffAzureAD.Server;
 
 /// <summary>
 /// Claims challenges, claims requests, and client capabilities
