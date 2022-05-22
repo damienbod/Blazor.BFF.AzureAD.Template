@@ -2,7 +2,7 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.AzureAD.Template/blob/main/README.md) 
 
-**2022-05-22** 1.2.2
+**2022-05-22** 1.2.3
 - use new top-level statements and remove
 - enable ImplicitUsings
 - add IAntiforgeryHttpClientFactory/AntiforgeryHttpClientFactory
