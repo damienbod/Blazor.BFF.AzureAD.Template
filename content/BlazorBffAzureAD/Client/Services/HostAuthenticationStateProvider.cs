@@ -1,12 +1,8 @@
 ﻿using BlazorBffAzureAD.Shared.Authorization;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Net.Http;
 using System.Net.Http.Json;
 using System.Security.Claims;
-using System.Threading.Tasks;
 
 namespace BlazorBffAzureAD.Client.Services;
 

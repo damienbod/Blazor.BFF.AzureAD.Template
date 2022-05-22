@@ -1,12 +1,8 @@
 ﻿using BlazorBffAzureAD.Client.Services;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
-using System;
-using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Threading.Tasks;
 
 namespace BlazorBffAzureAD.Client;
 
@@ -36,6 +32,7 @@ public class Program
         }).AddHttpMessageHandler<AuthorizedHandler>();
 
         builder.Services.AddTransient(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("default"));
+        builder.Services.AddTransient<IAntiforgeryHttpClientFactory, AntiforgeryHttpClientFactory>();
 
         await builder.Build().RunAsync();
     }
