@@ -2,6 +2,12 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.AzureAD.Template/blob/main/README.md) 
 
+**2022-05-22** 1.2.2
+- use new top-level statements and remove
+- enable ImplicitUsings
+- add IAntiforgeryHttpClientFactory/AntiforgeryHttpClientFactory
+- Replace of IdentityModel with System.Security.Claims and remove IdentityModel nuget package
+
 **2022-05-20** 1.2.1
 - Add support for Azure AD Continuous Access Evaluation CAE
 - Add 404, 401, response handling
