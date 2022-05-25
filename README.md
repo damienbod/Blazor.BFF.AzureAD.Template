@@ -93,7 +93,7 @@ public async Task<IActionResult> Get()
   {
 	// Do logic which calls an API and throws claims challenge 
 	// WebApiMsalUiRequiredException. The WWW-Authenticate header is set
-	// using the OpenID Connect standards and Signals spec.
+	// using the OpenID Connect Events and Signals spec.
   }
   catch (WebApiMsalUiRequiredException hex)
   {
