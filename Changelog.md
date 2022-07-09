@@ -2,7 +2,7 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.AzureAD.Template/blob/main/README.md) 
 
-**2022-07-09** 1.2.3
+**2022-07-09** 1.2.4
 - Improved UserController
 - Updated Nuget packages
 
