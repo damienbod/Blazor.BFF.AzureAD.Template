@@ -2,6 +2,10 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.AzureAD.Template/blob/main/README.md) 
 
+**2022-07-09** 1.2.3
+- Improved UserController
+- Updated Nuget packages
+
 **2022-05-22** 1.2.3
 - use new top-level statements and remove
 - enable ImplicitUsings
