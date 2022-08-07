@@ -19,33 +19,51 @@
     },
     "sourceName": "BlazorBffAzureAD",
     "preferNameDirectory": "true",
-	    "guids": [
-		"CFDA20EC-841D-4A9C-A95C-2C674DA96F23",
-		"74A2A84B-C3B8-499F-80ED-093854CABDEA",
-		"BD70F728-398A-4A88-A7C7-A3D9B78B5AE6"
+	"guids": [
+		"37DFADAA-3CEC-4DC2-919F-D721E6762108",
+		"65DEEE1B-8DEB-4732-9025-3325135D81F7",
+		"A3764333-AB8E-4899-A796-3FDAE76A3A0B"
     ],
     "symbols": {
+		"HttpPort": {
+		  "type": "parameter",
+		  "datatype": "integer",
+		  "description": "Port number to use for the HTTP endpoint in launchSettings.json."
+		},
+		"HttpPortGenerated": {
+		  "type": "generated",
+		  "generator": "port"
+		},
+		"HttpPortReplacer": {
+		  "type": "generated",
+		  "generator": "coalesce",
+		  "parameters": {
+			"sourceVariableName": "HttpPort",
+			"fallbackVariableName": "HttpPortGenerated"
+		  },
+		  "replaces": "44348"
+		},
 		"HttpsPort": {
-			"type": "parameter",
-			"datatype": "integer",
-			"description": "Port number to use for the HTTPS endpoint in launchSettings.json."
+		  "type": "parameter",
+		  "datatype": "integer",
+		  "description": "Port number to use for the HTTPS endpoint in launchSettings.json."
 		},
 		"HttpsPortGenerated": {
-			"type": "generated",
-			"generator": "port",
-			"parameters": {
+		  "type": "generated",
+		  "generator": "port",
+		  "parameters": {
 			"low": 44300,
 			"high": 44399
-			}
+		  }
 		},
 		"HttpsPortReplacer": {
-			"type": "generated",
-			"generator": "coalesce",
-			"parameters": {
+		  "type": "generated",
+		  "generator": "coalesce",
+		  "parameters": {
 			"sourceVariableName": "HttpsPort",
 			"fallbackVariableName": "HttpsPortGenerated"
-			},
-			"replaces": "44348"
+		  },
+		  "replaces": "44348"
 		}
     }
 }
