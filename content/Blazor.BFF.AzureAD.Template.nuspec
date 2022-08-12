@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
 	<metadata>
 		<id>Blazor.BFF.AzureAD.Template</id>
-		<version>1.2.5</version>
+		<version>1.2.6</version>
 		<title>Blazor.BFF.AzureAD.Template</title>
 		<license type="file">LICENSE</license>
 		<description>Blazor backend for frontend (BFF) template for WASM ASP.NET Core hosted</description>
@@ -15,7 +15,7 @@
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<copyright>2022 damienbod</copyright>
 		<summary>This template provides a simple Blazor template with BFF server authentication WASM hosted</summary>
-		<releaseNotes>Improved template, updated nuget packages</releaseNotes>
+		<releaseNotes>Improved template with http port generation, updated nuget packages</releaseNotes>
 		<repository type="git" url="https://github.com/damienbod/Blazor.BFF.AzureAD.Template" />
 		<packageTypes>
 			<packageType name="Template" />
