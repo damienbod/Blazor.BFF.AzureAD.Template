@@ -2,6 +2,9 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.AzureAD.Template/blob/main/README.md) 
 
+**2022-09-23** 1.2.7
+- Updated packages
+
 **2022-08-12** 1.2.6
 - Http port generator added
 - Updated packages
