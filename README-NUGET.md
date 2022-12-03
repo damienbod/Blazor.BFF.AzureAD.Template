@@ -6,7 +6,7 @@ This template can be used to create a Blazor WASM application hosted in an ASP.N
 
 ## Features
 
-- WASM hosted in ASP.NET Core 6
+- WASM hosted in ASP.NET Core 7
 - BFF with Azure AD using Microsoft.Identity.Web
 - OAuth2 and OpenID Connect OIDC
 - No tokens in the browser
@@ -171,7 +171,7 @@ public IActionResult Get()
 dotnet new -u Blazor.BFF.AzureAD.Template
 ```
 
-## Credits, Used NuGet packages + ASP.NET Core 6.0 standard packages
+## Credits, Used NuGet packages + ASP.NET Core 7.0 standard packages
 
 - NetEscapades.AspNetCore.SecurityHeaders
 

@@ -8,7 +8,7 @@ This template can be used to create a Blazor WASM application hosted in an ASP.N
 
 ## Features
 
-- WASM hosted in ASP.NET Core 6
+- WASM hosted in ASP.NET Core 7
 - BFF with Azure AD using Microsoft.Identity.Web
 - OAuth2 and OpenID Connect OIDC
 - No tokens in the browser
@@ -191,7 +191,7 @@ nuget pack content/Blazor.BFF.AzureAD.Template.nuspec
 Locally built nupkg:
 
 ```
-dotnet new -i Blazor.BFF.AzureAD.Template.1.2.7.nupkg
+dotnet new -i Blazor.BFF.AzureAD.Template.2.0.0.nupkg
 ```
 
 Local folder:
@@ -206,7 +206,7 @@ Where `<PATH>` is the path to the folder containing .template.config.
 
 https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app
 
-## Credits, Used NuGet packages + ASP.NET Core 6.0 standard packages
+## Credits, Used NuGet packages + ASP.NET Core 7.0 standard packages
 
 - NetEscapades.AspNetCore.SecurityHeaders
 
