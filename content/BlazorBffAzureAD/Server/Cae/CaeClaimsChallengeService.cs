@@ -12,13 +12,6 @@
 /// </summary>
 public class CaeClaimsChallengeService
 {
-    private readonly IConfiguration _configuration;
-
-    public CaeClaimsChallengeService(IConfiguration configuration)
-    {
-        _configuration = configuration;
-    }
-
     public string? CheckForRequiredAuthContextIdToken(string authContextId, HttpContext context)
     {
         if (!string.IsNullOrEmpty(authContextId))
@@ -34,14 +27,11 @@ public class CaeClaimsChallengeService
 
             if (acrsClaim?.Value != authContextId)
             {
-                string clientId = _configuration.GetSection("AzureAd").GetSection("ClientId").Value;
                 var cae = "{\"id_token\":{\"acrs\":{\"essential\":true,\"value\":\"" + authContextId + "\"}}}";
-
                 return cae;
             }
         }
 
         return null;
     }
-
 }
