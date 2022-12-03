@@ -30,7 +30,7 @@ services.AddHttpClient();
 services.AddOptions();
 
 var scopes = configuration.GetValue<string>("DownstreamApi:Scopes");
-string[] initialScopes = scopes.Split(' ');
+string[] initialScopes = scopes!.Split(' ');
 
 services.AddMicrosoftIdentityWebAppAuthentication(configuration)
     .EnableTokenAcquisitionToCallDownstreamApi(initialScopes)
@@ -75,12 +75,9 @@ app.UseNoUnauthorizedRedirect("/api");
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapRazorPages();
-    endpoints.MapControllers();
-    endpoints.MapNotFound("/api/{**segment}");
-    endpoints.MapFallbackToPage("/_Host");
-});
+app.MapRazorPages();
+app.MapControllers();
+app.MapNotFound("/api/{**segment}");
+app.MapFallbackToPage("/_Host");
 
 app.Run();
