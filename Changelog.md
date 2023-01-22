@@ -2,6 +2,10 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.AzureAD.Template/blob/main/README.md) 
 
+
+**2023-01-22** 2.0.1
+- Updated .NET packages
+
 **2022-12-03** 2.0.0
 - Updated to .NET 7
 
