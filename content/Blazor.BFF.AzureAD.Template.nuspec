@@ -13,7 +13,7 @@
 		<language>en-US</language>
 		<tags>Blazor BFF WASM ASP.NET Core</tags>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<copyright>2022 damienbod</copyright>
+		<copyright>2023 damienbod</copyright>
 		<summary>This template provides a simple Blazor template with BFF server authentication WASM hosted</summary>
 		<releaseNotes>Updated to .NET 7</releaseNotes>
 		<repository type="git" url="https://github.com/damienbod/Blazor.BFF.AzureAD.Template" />
