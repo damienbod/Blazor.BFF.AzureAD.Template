@@ -28,12 +28,12 @@ public static class SecurityHeadersDefinitions
                 builder.AddBaseUri().Self();
                 builder.AddFrameAncestors().None();
 
+                // https://report-uri.com/home/hash/
                 // due to Blazor
                 builder.AddScriptSrc()
                     .Self()
-                    .WithHash256("v8v3RKRPmN4odZ1CWM5gw80QKPCCWMcpNeOmimNL2AA=")
-                    .WasmUnsafeEval();
-
+                    .WithHash256("ZD0chCyBaNHl+4UwQHJIHGoYhKwMeyCXGgJTKW5/67E=")
+                    .UnsafeEval();
             })
             .RemoveServerHeader()
             .AddPermissionsPolicy(builder =>
