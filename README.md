@@ -197,7 +197,7 @@ dotnet new install Blazor.BFF.AzureAD.Template.2.1.0.nupkg
 Local folder:
 
 ```
-dotnet new -i <PATH>
+dotnet new install <PATH>
 ```
 
 Where `<PATH>` is the path to the folder containing .template.config.
