@@ -17,7 +17,7 @@ This template can be used to create a Blazor WASM application hosted in an ASP.N
 ### install
 
 ```
-dotnet new -i Blazor.BFF.AzureAD.Template
+dotnet new install Blazor.BFF.AzureAD.Template
 ```
 
 ### run
