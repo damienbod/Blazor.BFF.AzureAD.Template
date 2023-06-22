@@ -1,6 +1,7 @@
 ﻿using Microsoft.Graph;
 using Microsoft.Graph.Models;
 using Microsoft.Identity.Web;
+using Microsoft.IdentityModel.Tokens;
 
 namespace BlazorBffAzureAD.Server.Services
 {
@@ -31,8 +32,8 @@ namespace BlazorBffAzureAD.Server.Services
                     .Content
                     .GetAsync(b => b.Options.WithScopes("User.ReadBasic.All", "user.read")))
                 {
-                    byte[] photoByte = ((MemoryStream)photoStream).ToArray();
-                    photo = Convert.ToBase64String(photoByte);
+                    byte[] photoByte = ((MemoryStream)photoStream!).ToArray();
+                    photo = Base64UrlEncoder.Encode(photoByte);
                 }
 
                 return photo;
