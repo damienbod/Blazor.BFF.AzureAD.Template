@@ -168,7 +168,7 @@ public IActionResult Get()
 ### uninstall
 
 ```
-dotnet new -u Blazor.BFF.AzureAD.Template
+dotnet new uninstall Blazor.BFF.AzureAD.Template
 ```
 
 ## Credits, Used NuGet packages + ASP.NET Core 7.0 standard packages
