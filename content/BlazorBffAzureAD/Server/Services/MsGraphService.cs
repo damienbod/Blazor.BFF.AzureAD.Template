@@ -1,4 +1,5 @@
 ﻿using Microsoft.Graph;
+using Microsoft.Graph.Models;
 using Microsoft.Identity.Web;
 
 namespace BlazorBffAzureAD.Server.Services
@@ -12,13 +13,10 @@ namespace BlazorBffAzureAD.Server.Services
             _graphServiceClient = graphServiceClient;
         }
 
-        public async Task<User> GetGraphApiUser()
+        public async Task<User?> GetGraphApiUser()
         {
-            return await _graphServiceClient
-                .Me
-                .Request()
-                .WithScopes("User.ReadBasic.All", "user.read")
-                .GetAsync();
+            return await _graphServiceClient.Me
+                .GetAsync(b => b.Options.WithScopes("User.ReadBasic.All", "user.read"));
         }
 
         public async Task<string> GetGraphApiProfilePhoto()
@@ -28,8 +26,10 @@ namespace BlazorBffAzureAD.Server.Services
                 var photo = string.Empty;
                 // Get user photo
                 using (var photoStream = await _graphServiceClient
-                    .Me.Photo.Content.Request()
-                    .WithScopes("User.ReadBasic.All", "user.read").GetAsync())
+                    .Me
+                    .Photo
+                    .Content
+                    .GetAsync(b => b.Options.WithScopes("User.ReadBasic.All", "user.read")))
                 {
                     byte[] photoByte = ((MemoryStream)photoStream).ToArray();
                     photo = Convert.ToBase64String(photoByte);
