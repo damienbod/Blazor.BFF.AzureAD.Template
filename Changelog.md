@@ -2,6 +2,11 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.AzureAD.Template/blob/main/README.md) 
 
+**2023-06-21** 2.1.0
+- Switched to Graph SDK 5
+- Updated packages
+- fixed Graph photo encoding
+
 **2023-03-11** 2.0.2
 - Fix security headers, use on app requests including API calls
 - Updated packages
