@@ -2,7 +2,7 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.AzureAD.Template/blob/main/README.md) 
 
-**2023-11-03** 2.12.0
+**2023-11-03** 2.2.0
 - Updated packages
 - fixed XSS security header
 
