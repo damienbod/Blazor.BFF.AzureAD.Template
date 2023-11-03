@@ -2,6 +2,10 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.AzureAD.Template/blob/main/README.md) 
 
+**2023-11-03** 2.12.0
+- Updated packages
+- fixed XSS security header
+
 **2023-06-21** 2.1.0
 - Switched to Graph SDK 5
 - Updated packages
