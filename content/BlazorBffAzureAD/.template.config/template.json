@@ -1,10 +1,10 @@
 {
     "author": "damienbod",
     "classifications": [
-        "AspNetCore",
-        "WASM",
+		"AspNetCore",
+		"WASM",
 		"MicrosoftEntraID",
-        "AzureAD",
+		"AzureAD",
 		"OAuth2",
 		"Web",
 		"Cloud",
