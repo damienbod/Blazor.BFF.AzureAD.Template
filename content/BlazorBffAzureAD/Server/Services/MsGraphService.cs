@@ -3,50 +3,49 @@ using Microsoft.Graph.Models;
 using Microsoft.Identity.Web;
 using Microsoft.IdentityModel.Tokens;
 
-namespace BlazorBffAzureAD.Server.Services
+namespace BlazorBffAzureAD.Server.Services;
+
+public class MsGraphService
 {
-    public class MsGraphService
+    private readonly GraphServiceClient _graphServiceClient;
+
+    public MsGraphService(GraphServiceClient graphServiceClient)
     {
-        private readonly GraphServiceClient _graphServiceClient;
+        _graphServiceClient = graphServiceClient;
+    }
 
-        public MsGraphService(GraphServiceClient graphServiceClient)
-        {
-            _graphServiceClient = graphServiceClient;
-        }
+    public async Task<User?> GetGraphApiUser()
+    {
+        return await _graphServiceClient.Me
+            .GetAsync(b => b.Options.WithScopes("User.ReadBasic.All", "user.read"));
+    }
 
-        public async Task<User?> GetGraphApiUser()
+    public async Task<string> GetGraphApiProfilePhoto()
+    {
+        try
         {
-            return await _graphServiceClient.Me
-                .GetAsync(b => b.Options.WithScopes("User.ReadBasic.All", "user.read"));
-        }
+            var photo = string.Empty;
+            byte[] photoByte;
+            var streamPhoto = new MemoryStream();
 
-        public async Task<string> GetGraphApiProfilePhoto()
-        {
-            try
+            // Get user photo
+            using (var photoStream = await _graphServiceClient
+                .Me
+                .Photo
+                .Content
+                .GetAsync(b => b.Options.WithScopes("User.ReadBasic.All", "user.read")))
             {
-                var photo = string.Empty;
-                byte[] photoByte;
-                var streamPhoto = new MemoryStream();
-
-                // Get user photo
-                using (var photoStream = await _graphServiceClient
-                    .Me
-                    .Photo
-                    .Content
-                    .GetAsync(b => b.Options.WithScopes("User.ReadBasic.All", "user.read")))
-                {
-                    photoStream!.CopyTo(streamPhoto);
-                    photoByte = streamPhoto!.ToArray();
-                }
-
-                photo = Base64UrlEncoder.Encode(photoByte);
-
-                return photo;
+                photoStream!.CopyTo(streamPhoto);
+                photoByte = streamPhoto!.ToArray();
             }
-            catch
-            {
-                return string.Empty;
-            }
+
+            photo = Base64UrlEncoder.Encode(photoByte);
+
+            return photo;
+        }
+        catch
+        {
+            return string.Empty;
         }
     }
 }
