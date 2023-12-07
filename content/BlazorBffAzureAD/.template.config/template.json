@@ -3,7 +3,7 @@
     "classifications": [
         "AspNetCore",
         "WASM",
-		"MicrosoftEntraID"
+		"MicrosoftEntraID",
         "AzureAD",
 		"OAuth2",
 		"Web",
