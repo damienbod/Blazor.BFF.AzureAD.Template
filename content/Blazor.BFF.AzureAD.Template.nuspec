@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
 	<metadata>
 		<id>Blazor.BFF.AzureAD.Template</id>
-		<version>3.0.0</version>
+		<version>3.0.1</version>
 		<title>Blazor.BFF.AzureAD.Template</title>
 		<license type="file">LICENSE</license>
 		<description>Blazor backend for frontend (BFF) template for WASM ASP.NET Core hosted</description>
