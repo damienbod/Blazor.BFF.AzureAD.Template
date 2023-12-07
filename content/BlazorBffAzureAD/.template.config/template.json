@@ -3,6 +3,7 @@
     "classifications": [
         "AspNetCore",
         "WASM",
+		"MicrosoftEntraID"
         "AzureAD",
 		"OAuth2",
 		"Web",
@@ -11,7 +12,7 @@
 		"Solution",
 		"Blazor"
     ],
-    "name": "ASP.NET Core Blazor BFF hosted WASM Azure AD",
+    "name": "ASP.NET Core Blazor BFF hosted WASM Microsoft Entra ID",
     "identity": "Blazor.BFF.AzureAD.Template",
     "shortName": "blazorbffaad",
     "tags": {

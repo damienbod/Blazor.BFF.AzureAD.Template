@@ -2,6 +2,11 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.AzureAD.Template/blob/main/README.md) 
 
+**2023-12-07** 3.0.0
+- Updated .NET 8
+- Fixed Graph SDK photo streaming
+- Rebranding Microsoft Entra ID
+
 **2023-11-03** 2.2.0
 - Updated packages
 - fixed XSS security header

@@ -2,17 +2,17 @@
 
 [![.NET](https://github.com/damienbod/Blazor.BFF.AzureAD.Template/actions/workflows/dotnet.yml/badge.svg)](https://github.com/damienbod/Blazor.BFF.AzureAD.Template/actions/workflows/dotnet.yml) [![NuGet Status](http://img.shields.io/nuget/v/Blazor.BFF.AzureAD.Template.svg?style=flat-square)](https://www.nuget.org/packages/Blazor.BFF.AzureAD.Template/) [Change log](https://github.com/damienbod/Blazor.BFF.AzureAD.Template/blob/main/Changelog.md)
 
-This template can be used to create a Blazor WASM application hosted in an ASP.NET Core Web app using Azure AD and Microsoft.Identity.Web to authenticate using the BFF security architecture. (server authentication) This removes the tokens from the browser and uses cookies with each HTTP request, response. The template also adds the required security headers as best it can for a Blazor application.
+This template can be used to create a Blazor WASM application hosted in an ASP.NET Core Web app using Microsoft Entra ID and Microsoft.Identity.Web to authenticate using the BFF security architecture. (server authentication) This removes the tokens from the browser and uses cookies with each HTTP request, response. The template also adds the required security headers as best it can for a Blazor application.
 
-![Blazor BFF Azure AD](https://github.com/damienbod/Blazor.BFF.AzureAD.Template/blob/main/images/blazorBFFAzureAD.png)
+![Blazor BFF Microsoft Entra ID](https://github.com/damienbod/Blazor.BFF.AzureAD.Template/blob/main/images/blazorBFFAzureAD.png)
 
 ## Features
 
-- WASM hosted in ASP.NET Core 7
-- BFF with Azure AD using Microsoft.Identity.Web
+- WASM hosted in ASP.NET Core 8
+- BFF with Microsoft Entra ID using Microsoft.Identity.Web
 - OAuth2 and OpenID Connect OIDC
 - No tokens in the browser
-- Azure AD Continuous Access Evaluation CAE support
+- Microsoft Entra ID Continuous Access Evaluation CAE support
 
 ## Other templates
 
@@ -38,7 +38,7 @@ Use the `-n` or `--name` parameter to change the name of the output created. Thi
 
 ## Setup after installation
 
-Add the Azure AD App registration settings
+Add the Microsoft Entra ID App registration settings
 
 ```
 {
@@ -191,7 +191,7 @@ nuget pack content/Blazor.BFF.AzureAD.Template.nuspec
 Locally built nupkg:
 
 ```
-dotnet new install Blazor.BFF.AzureAD.Template.2.2.0.nupkg
+dotnet new install Blazor.BFF.AzureAD.Template.3.0.0.nupkg
 ```
 
 Local folder:
@@ -206,7 +206,7 @@ Where `<PATH>` is the path to the folder containing .template.config.
 
 https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app
 
-## Credits, Used NuGet packages + ASP.NET Core 7.0 standard packages
+## Credits, Used NuGet packages + ASP.NET Core 8.0 standard packages
 
 - NetEscapades.AspNetCore.SecurityHeaders
 
