@@ -25,6 +25,9 @@ namespace BlazorBffAzureAD.Server.Services
             try
             {
                 var photo = string.Empty;
+                byte[] photoByte;
+                var streamPhoto = new MemoryStream();
+
                 // Get user photo
                 using (var photoStream = await _graphServiceClient
                     .Me
@@ -32,9 +35,11 @@ namespace BlazorBffAzureAD.Server.Services
                     .Content
                     .GetAsync(b => b.Options.WithScopes("User.ReadBasic.All", "user.read")))
                 {
-                    byte[] photoByte = ((MemoryStream)photoStream!).ToArray();
-                    photo = Base64UrlEncoder.Encode(photoByte);
+                    photoStream!.CopyTo(streamPhoto);
+                    photoByte = streamPhoto!.ToArray();
                 }
+
+                photo = Base64UrlEncoder.Encode(photoByte);
 
                 return photo;
             }
