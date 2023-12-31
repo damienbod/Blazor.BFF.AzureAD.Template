@@ -2,6 +2,9 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.AzureAD.Template/blob/main/README.md) 
 
+**2023-12-31** 3.0.2
+- Added open redirect protection to login
+
 **2023-12-07** 3.0.1
 - Updated .NET 8
 - Fixed Graph SDK photo streaming
