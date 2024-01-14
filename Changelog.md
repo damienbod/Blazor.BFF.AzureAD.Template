@@ -2,6 +2,10 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.AzureAD.Template/blob/main/README.md) 
 
+**2024-01-14** 3.1.0
+- Support for CSP nonce
+- Updated packages
+
 **2023-12-31** 3.0.2
 - Added open redirect protection to login
 
