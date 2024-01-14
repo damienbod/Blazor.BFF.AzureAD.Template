@@ -4,10 +4,7 @@ public static class SecurityHeadersDefinitions
 {
     public static HeaderPolicyCollection GetHeaderPolicyCollection(bool isDev, string? idpHost)
     {
-        if(idpHost == null)
-        {
-            throw new ArgumentNullException(nameof(idpHost));
-        }
+        ArgumentNullException.ThrowIfNull(idpHost);
 
         var policy = new HeaderPolicyCollection()
             .AddFrameOptionsDeny()
@@ -30,7 +27,7 @@ public static class SecurityHeadersDefinitions
                 // due to Blazor
                 builder.AddScriptSrc()
                     .Self()
-                    .WithHash256("v8v3RKRPmN4odZ1CWM5gw80QKPCCWMcpNeOmimNL2AA=")
+                    .WithNonce()
                     .UnsafeEval();
 
                 // disable script and style CSP protection if using Blazor hot reload
@@ -58,7 +55,7 @@ public static class SecurityHeadersDefinitions
         if (!isDev)
         {
             // maxage = one year in seconds
-            policy.AddStrictTransportSecurityMaxAgeIncludeSubDomains(maxAgeInSeconds: 60 * 60 * 24 * 365);
+            policy.AddStrictTransportSecurityMaxAgeIncludeSubDomains();
         }
 
         policy.ApplyDocumentHeadersToAllResponses();
