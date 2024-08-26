@@ -2,6 +2,9 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.AzureAD.Template/blob/main/README.md) 
 
+**2024-08-26** 3.1.2
+- Updated packages
+
 **2024-02-01** 3.1.1
 - Fix refresh bug
 - Updated packages
