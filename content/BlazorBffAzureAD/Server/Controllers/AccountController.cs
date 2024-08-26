@@ -18,7 +18,7 @@ public class AccountController : ControllerBase
 
         var properties = GetAuthProperties(returnUrl);
 
-        if(claimsChallenge != null)
+        if (claimsChallenge != null)
         {
             string jsonString = claimsChallenge.Replace("\\", "")
                 .Trim(new char[1] { '"' });
